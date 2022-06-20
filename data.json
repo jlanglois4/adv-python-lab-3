@@ -1,0 +1,64 @@
+{
+  "charcters": [
+    {
+      "Name": "Cernunnos",
+      "Type": "Ranger",
+      "From": "Celtic",
+      "Health": "200"
+    },
+    {
+      "Name": "Wiglaf",
+      "Type": "Ranger",
+      "From": "Geats",
+      "Health": "75"
+    },
+    {
+      "Name": "Merlin",
+      "Type": "Wizard",
+      "From": "Welsh",
+      "Health": "300"
+    },
+    {
+      "Name": "William Shakespeare",
+      "Type": "Bard",
+      "From": "Cockney",
+      "Health": "25"
+    },
+    {
+      "Name": "Beowolf",
+      "Type": "Ranger",
+      "From": "Geats",
+      "Health": "200"
+    },
+    {
+      "Name": "Charlemagne",
+      "Type": "Paladin",
+      "From": "Lombards",
+      "Health": "200"
+    },
+    {
+      "Name": "Scyth",
+      "Type": "Barbarian",
+      "From": "Tarim",
+      "Health": "122"
+    },
+    {
+      "Name": "Morgan le Fay",
+      "Type": "Wizard",
+      "From": "Cornish",
+      "Health": "50"
+    },
+    {
+      "Name": "Rabindranath Tagore",
+      "Type": "Bard",
+      "From": "Brahmo",
+      "Health": "15"
+    },
+    {
+      "Name": "Galatia",
+      "Type": "Barbarian",
+      "From": "Gual",
+      "Health": "155"
+    }
+  ]
+}

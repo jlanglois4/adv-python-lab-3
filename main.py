@@ -1,4 +1,5 @@
 import csv
+import json
 from pathlib import Path
 
 chr_types = {}
@@ -6,21 +7,19 @@ output_list = []
 
 
 def main():
-    file_path = Path.cwd() / "data.csv"
-    if file_path.exists():
-        with file_path.open() as my_file:
-            csv_reader = csv.reader(my_file)  # , delimiter='|'
-            # skip headings // next(csv_reader)
-            for line in csv_reader:
-                type_of_character = line[0].split(',')[1].strip()
-                output_list.append([type_of_character, line[1], line[2]])
-                if type_of_character in chr_types:
-                    chr_types[type_of_character] += int(line[2])
-                else:
-                    chr_types.update({type_of_character: int(line[2])})
-
-        for key in chr_types:
-            print(f"{key} {chr_types[key]}")
+    file_path = Path.cwd() / "data.json"
+    with file_path.open() as my_file:
+        lines = my_file.read().replace('\n', '')
+        json_data = json.loads(lines)
+        character_list = json_data["charcters"]
+        for a_line in character_list:
+            type_of_character = a_line["Type"]
+            if type_of_character in chr_types:
+                chr_types[type_of_character] += int(a_line["Health"])
+            else:
+                chr_types[type_of_character] = int(a_line["Health"])
+    for key in chr_types:
+        print(f"{key} {chr_types[key]}")
 
 
 def output():
